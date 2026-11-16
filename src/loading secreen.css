@@ -1,0 +1,94 @@
+
+.luna-loading {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #080610;
+  color: white;
+}
+
+.loading-glow {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: #8429d7;
+  filter: blur(150px);
+  opacity: 0.25;
+}
+
+.loading-content {
+  position: relative;
+  z-index: 2;
+  width: min(340px, 85%);
+  text-align: center;
+}
+
+.loading-eagle {
+  font-size: 100px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 25px #a94dff);
+  animation: eaglePulse 2s infinite alternate;
+}
+
+.loading-content h1 {
+  font-size: 42px;
+  font-weight: 900;
+  letter-spacing: 7px;
+}
+
+.loading-content h1 span {
+  color: #b16aff;
+}
+
+.loading-subtitle {
+  font-size: 10px;
+  letter-spacing: 5px;
+  color: #aa7ce3;
+  margin-top: 13px;
+}
+
+.loading-bar {
+  height: 4px;
+  width: 100%;
+  margin-top: 55px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #272034;
+}
+
+.loading-progress {
+  height: 100%;
+  background: linear-gradient(90deg, #6722b5, #cf82ff);
+  box-shadow: 0 0 15px #a64cff;
+  transition: width 0.1s linear;
+}
+
+.loading-status {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 13px;
+  color: #a99cb9;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.loading-footer {
+  margin-top: 65px;
+  color: #71647f;
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+@keyframes eaglePulse {
+  from {
+    transform: scale(0.95);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
